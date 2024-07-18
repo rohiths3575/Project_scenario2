@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="parallel testing "  parallel="methods" thread-count="4"   >
+  <test name="parallel"  >
+    <classes>
+      <class name="scenario2.test" >
+      <methods>
+      <include name="Counting"></include>
+      <include name="searchByUserName"></include>
+      <include name="searchByUserRole"></include>
+      <include name="searchByUserStatus"></include>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- parallel -->
+  <test name="parallel1" >
+    <classes>
+      <class name="scenario2.test"/>
+    </classes>
+  </test> <!-- parallel -->
+</suite> <!-- parallel testing  -->

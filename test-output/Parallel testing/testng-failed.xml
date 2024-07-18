@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [Parallel testing]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="methods" name="parallel(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="scenario2.Admin">
+        <methods>
+          <include name="Beforemethod"/>
+          <include name="searchByUserName"/>
+          <include name="searchByUserRole"/>
+          <include name="Counting"/>
+          <include name="searchByUserStatus"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- scenario2.Admin -->
+    </classes>
+  </test> <!-- parallel(failed) -->
+  <test thread-count="2" parallel="methods" name="parallel1(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="scenario2.Admin">
+        <methods>
+          <include name="Beforemethod"/>
+          <include name="searchByUserName"/>
+          <include name="searchByUserRole"/>
+          <include name="Counting"/>
+          <include name="searchByUserStatus"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- scenario2.Admin -->
+    </classes>
+  </test> <!-- parallel1(failed) -->
+</suite> <!-- Failed suite [Parallel testing] -->
